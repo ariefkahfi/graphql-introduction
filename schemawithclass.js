@@ -30,7 +30,7 @@ const personType = new GraphQLObjectType({
 })
 
 const rootQuery = new GraphQLObjectType({
-    name:'query',
+    name:'Root',
     fields:{
         personOnlyName: {
            type:new GraphQLList(personType) ,
@@ -58,9 +58,6 @@ const introspectSchemaQuery = `
         __schema {
             types {
                 name
-                fields {
-                    name
-                }
             }
         }
     }

@@ -82,6 +82,16 @@ let rootValue = {
 }
 
 
+const introspectSchemaQuery = `
+    {
+        __schema {
+            types {
+                name
+            }
+        }
+    }
+`
+
 const findPersonQuery = `
     {
         findPersonFirstIndex(name: "aa8") {
